@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Moonpig front-end test solution",
   "main": "index.js",
-  "homepage": "https://avanthikameenakshi.github.io",
+  "homepage": "https://moonpig-assessment.github.io",
   "scripts": {
     "dev": "webpack serve",
     "build": "webpack",
