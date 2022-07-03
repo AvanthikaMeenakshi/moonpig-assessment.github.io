@@ -115,7 +115,7 @@ function App() {
         react_1.default.createElement(Header_1.default, null),
         react_1.default.createElement("div", { className: 'main-content' },
             react_1.default.createElement(react_router_dom_1.Routes, null,
-                react_1.default.createElement(react_router_dom_1.Route, { path: "/", element: react_1.default.createElement(ListCards_1.default, null) })))));
+                react_1.default.createElement(react_router_dom_1.Route, { path: process.env.PUBLIC_URL + "/", element: react_1.default.createElement(ListCards_1.default, null) })))));
 }
 const rootElement = document.getElementById('root');
 const documentRoot = client_1.default.createRoot(rootElement);
@@ -193,11 +193,11 @@ function ListCards() {
     }, []);
     const dataToDisplay = cards.slice(0, pageInfo.entriesPerPage);
     if (error)
-        return (react_1.default.createElement("div", { className: 'error-display' },
+        return (react_1.default.createElement("div", { "data-testid": 'error-msg', className: 'error-display' },
             react_1.default.createElement(bi_1.BiMessageError, { color: '#ffa2c1', size: '10em' }),
             react_1.default.createElement("div", null, "Sorry, we are currently encountering issues, we\u2018ll be back soon!")));
     return (react_1.default.createElement(react_1.default.Fragment, null,
-        react_1.default.createElement("div", { "data-testid": 'cards-list', className: 'cards' }, dataToDisplay.map((product) => (react_1.default.createElement("div", { "data-testid": 'card-info', className: 'card', key: product.ProductId },
+        cards.length && react_1.default.createElement("div", { "data-testid": 'cards-list', className: 'cards' }, dataToDisplay.map((product) => (react_1.default.createElement("div", { "data-testid": 'card-info', className: 'card', key: product.ProductId },
             react_1.default.createElement("div", null,
                 react_1.default.createElement("img", { className: 'card-image', alt: product.Title, src: product.ProductImage.Link.Href })))))),
         isFetching && react_1.default.createElement("div", { className: "lds-ellipsis" }, Array.from(Array(4).keys()).map((num) => react_1.default.createElement("div", { key: `loading-${num}` })))));
