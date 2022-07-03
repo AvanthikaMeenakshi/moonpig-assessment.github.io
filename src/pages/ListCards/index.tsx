@@ -44,7 +44,7 @@ function ListCards() {
   }, []);
 
   const dataToDisplay = cards.slice(0, pageInfo.entriesPerPage)
-  if (error) return (<div className='error-display'>
+  if (error) return (<div data-testid='error-msg' className='error-display'>
     <BiMessageError color='#ffa2c1' size='10em' />
     <div>
       Sorry, we are currently encountering issues, we&lsquo;ll be back soon!
@@ -52,7 +52,7 @@ function ListCards() {
   </div>)
   return (
     <>
-      <div data-testid='cards-list' className='cards'>
+      {cards.length && <div data-testid='cards-list' className='cards'>
         {dataToDisplay.map((product: Product) => (
           <div data-testid='card-info' className='card' key={product.ProductId}>
             <div>
@@ -60,7 +60,7 @@ function ListCards() {
             </div>
           </div>
         ))}
-      </div>
+      </div>}
       {isFetching && <div className="lds-ellipsis">{Array.from(Array(4).keys()).map((num) => <div key={`loading-${num}`} />)}</div>}
     </>
   );

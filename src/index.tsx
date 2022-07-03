@@ -15,7 +15,7 @@ function App() {
       <Header />
       <div className='main-content'>
         <Routes>
-          <Route path="/" element={<ListCards />} />
+          <Route path={process.env.PUBLIC_URL + "/"} element={<ListCards />} />
         </Routes>
       </div>
     </Router>

@@ -32,7 +32,15 @@ describe('List cards component', () => {
       render(<ListCards />)
     })
     await waitFor(() => screen.findByTestId('cards-list'));
-    const cards = screen.getAllByTestId('cards-info')
-    expect(cards.length).toHaveLength(10)
+    const cards = screen.getAllByTestId('card-info')
+    expect(cards).toHaveLength(10)
+  });
+  test('Component displays bunch of cards on page load', async () => {
+    (fetch as jest.Mock).mockImplementationOnce(() => Promise.reject({ message: 'Something went wrong' }))
+    act(() => {
+      render(<ListCards />)
+    })
+    await waitFor(() => screen.findByTestId('error-msg'));
+    expect(screen.getByTestId('error-msg').textContent).toBe('Sorry, we are currently encountering issues, we‘ll be back soon!')
   });
 })
