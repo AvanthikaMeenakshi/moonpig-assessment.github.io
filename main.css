@@ -131,7 +131,7 @@ header .header-items .search-icon input:focus {
   display: flex;
   align-items: flex-end;
 }
-.cards .card .card-link .card-image {
+.cards .card .card-image {
   display: block;
   width: 100%;
   height: 100%;
@@ -139,7 +139,7 @@ header .header-items .search-icon input:focus {
   transform: translateY(0px);
   transition: all 200ms ease-in-out 0s;
 }
-.cards .card .card-link .card-image:hover {
+.cards .card .card-image:hover {
   box-shadow: rgba(0, 32, 77, 0.15) 0px 11px 22px 0px;
   transform: translateY(-4px);
 }

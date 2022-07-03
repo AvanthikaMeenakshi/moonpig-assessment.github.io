@@ -111,7 +111,6 @@ const ListCards_1 = __importDefault(__webpack_require__(/*! ./pages/ListCards */
 const Header_1 = __importDefault(__webpack_require__(/*! ./components/Header */ "./src/components/Header.tsx"));
 __webpack_require__(/*! ./scss/app.scss */ "./src/scss/app.scss");
 function App() {
-    console.log(process.env.PUBLIC_URL);
     return (react_1.default.createElement(react_router_dom_1.BrowserRouter, null,
         react_1.default.createElement(Header_1.default, null),
         react_1.default.createElement("div", { className: 'main-content' },
