@@ -6,7 +6,7 @@
   "homepage": "https://avanthikameenakshi.github.io/moonpig-assessment.github.io",
   "scripts": {
     "dev": "webpack serve",
-    "build": "webpack",
+    "build": "rm -rf dist && webpack",
     "lint": "eslint src/*",
     "lint:fix": "eslint src/* --fix",
     "test": "jest",
