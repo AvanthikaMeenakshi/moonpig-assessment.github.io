@@ -68,18 +68,16 @@ header {
         margin: 0 8px;
         display: flex;
         align-items: flex-end;
-        .card-link {
-            .card-image {
-                display: block;
-                width: 100%;
-                height: 100%;
-                box-shadow: rgb(0 32 77 / 15%) 0px 3px 8px 0px;
-                transform: translateY(0px);
-                transition: all 200ms ease-in-out 0s;
-                &:hover {
-                    box-shadow: rgb(0 32 77 / 15%) 0px 11px 22px 0px;
-                    transform: translateY(-4px);
-                }
+        .card-image {
+            display: block;
+            width: 100%;
+            height: 100%;
+            box-shadow: rgb(0 32 77 / 15%) 0px 3px 8px 0px;
+            transform: translateY(0px);
+            transition: all 200ms ease-in-out 0s;
+            &:hover {
+                box-shadow: rgb(0 32 77 / 15%) 0px 11px 22px 0px;
+                transform: translateY(-4px);
             }
         }
     }

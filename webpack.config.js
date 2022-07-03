@@ -4,6 +4,11 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 
 module.exports = {
   mode: 'development',
+  output: {
+    filename: '[name].[hash].js',
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: '/',
+  },
   optimization: {
     splitChunks: {
       chunks: 'all',
@@ -11,9 +16,6 @@ module.exports = {
   },
   devtool: false,
   entry: path.join(__dirname, 'src', 'index.tsx'),
-  output: {
-    path: path.resolve(__dirname, 'dist'),
-  },
   module: {
     rules: [
       {
