@@ -115,7 +115,7 @@ function App() {
         react_1.default.createElement(Header_1.default, null),
         react_1.default.createElement("div", { className: 'main-content' },
             react_1.default.createElement(react_router_dom_1.Routes, null,
-                react_1.default.createElement(react_router_dom_1.Route, { path: "/", element: react_1.default.createElement(ListCards_1.default, null) })))));
+                react_1.default.createElement(react_router_dom_1.Route, { path: "/moonpig-assessment.github.io", element: react_1.default.createElement(ListCards_1.default, null) })))));
 }
 const rootElement = document.getElementById('root');
 const documentRoot = client_1.default.createRoot(rootElement);
