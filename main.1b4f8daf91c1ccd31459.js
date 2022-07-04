@@ -201,12 +201,13 @@ const Header_1 = __importDefault(__webpack_require__(/*! ./components/Header */ 
 const ViewCard_1 = __importDefault(__webpack_require__(/*! ./pages/ViewCard */ "./src/pages/ViewCard/index.tsx"));
 __webpack_require__(/*! ./scss/app.scss */ "./src/scss/app.scss");
 function App() {
-    return (react_1.default.createElement(react_router_dom_1.BrowserRouter, { basename: "/" },
+    console.log("development");
+    return (react_1.default.createElement(react_router_dom_1.BrowserRouter, { basename: '/moonpig-assessment.github.io' },
         react_1.default.createElement(Header_1.default, null),
         react_1.default.createElement("div", { className: 'main-content' },
             react_1.default.createElement(react_router_dom_1.Routes, null,
-                react_1.default.createElement(react_router_dom_1.Route, { path: "/", element: react_1.default.createElement(ListCards_1.default, null) }),
-                react_1.default.createElement(react_router_dom_1.Route, { path: "/:id", element: react_1.default.createElement(ViewCard_1.default, null) })))));
+                react_1.default.createElement(react_router_dom_1.Route, { path: '/', element: react_1.default.createElement(ListCards_1.default, null) }),
+                react_1.default.createElement(react_router_dom_1.Route, { path: "/card/:id", element: react_1.default.createElement(ViewCard_1.default, null) })))));
 }
 const rootElement = document.getElementById('root');
 const documentRoot = client_1.default.createRoot(rootElement);
@@ -289,7 +290,7 @@ function ListCards() {
         }, 2000);
     };
     const goToImageView = (productId) => {
-        navigate(productId);
+        navigate(`/card/${productId}`);
     };
     const [isFetching, setIsFetching] = (0, usePagination_1.default)(fetchMoreCards);
     (0, react_1.useEffect)(() => {
