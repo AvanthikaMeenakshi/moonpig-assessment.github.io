@@ -7,15 +7,17 @@ import {
 } from 'react-router-dom';
 import ListCards from './pages/ListCards';
 import Header from './components/Header';
+import ViewCard from './pages/ViewCard';
 import './scss/app.scss'
 
 function App() {
   return (
-    <Router>
+    <Router basename={`${process.env.BASE_URL}`}>
       <Header />
       <div className='main-content'>
         <Routes>
-          <Route path={"/"} element={<ListCards />} />
+          <Route path={'/'} element={<ListCards />} />
+          <Route path={"/card/:id"} element={<ViewCard />} />
         </Routes>
       </div>
     </Router>
