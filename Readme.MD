@@ -1,3 +1,5 @@
+Areas that needs improvement :)
+
 1. Move error component to its own file, improve error handling
 2. Lazy loading components so they load only when route is requested
 3. Have a separate config for prod and dev - webpack
