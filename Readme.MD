@@ -5,4 +5,4 @@ Areas that needs improvement :)
 3. Have a separate config for prod and dev - webpack
 4. Implement size picker on card view page
 5. Implement pre-commit hooks to test linting and test cases before commit
-6. Improve test coverage, see if we can refactor test cases
+6. Improve test coverage, see if we can refactor test cases - Add more test cases to test components like Header
